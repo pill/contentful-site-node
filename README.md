@@ -33,26 +33,11 @@ npm run start
 [Styled Components](https://www.styled-components.com/docs/)
 
 [Google Fonts](https://fonts.google.com/)
+
 ## Install Server
-
-## run server
+in the `/server` folder
 
 ```
-pipenv run server
-```
-
-
-### pyenv and pipenv
-
-https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c
-
-
-Fix zlib: https://github.com/pyenv/pyenv/issues/1219
-```
-sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-```
-
-Install pyenv Ubuntu
-```
-https://github.com/pyenv/pyenv#installation
+npm install
+npm run dev
 ```
