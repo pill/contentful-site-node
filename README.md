@@ -41,3 +41,7 @@ in the `/server` folder
 npm install
 npm run dev
 ```
+
+If you don't have node, install `nvm` (Node Version Manager)
+https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
+
