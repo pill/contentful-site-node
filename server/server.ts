@@ -26,6 +26,11 @@ app.get('/', (req: Request, res: Response) => {
   res.sendFile(path.join(clientPath, 'index.html'));
 });
 
+// Catch all routes - serve index.html for any unmatched path
+app.get('*', (req: Request, res: Response) => {
+  res.sendFile(path.join(clientPath, 'index.html'));
+});
+
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
