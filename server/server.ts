@@ -13,7 +13,12 @@ console.log('Current directory path:', __dirname);
 const app = express();
 const port = process.env.PORT || 3000;
 
-const clientPath = path.join(__dirname, '../client/dist/');
+
+// if running locally
+//const clientPath = path.join(__dirname, '../client/dist/');
+
+// if running from dist/server.js (in prod)
+const clientPath = path.join(__dirname, '../../client/dist/');
 
 // Middleware
 app.use(cors());
