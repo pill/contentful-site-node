@@ -4,6 +4,7 @@ import Navigation from "./nav"
 import Blog from "./blog"
 import Post from "./blog/post"
 import Tag from "./blog/tag"
+import Dev from "./blog/dev"
 import Home from "./home"
 import { BlogProvider } from "./blog/blogContext"
 import { parseUrl } from '../utils'
@@ -72,6 +73,9 @@ class MainContainer extends Component {
         break
       case 'blog':
         middle = <Blog key="blog" searchParams={searchParams} />
+        break
+      case 'dev':
+        middle = <Dev key="dev" searchParams={searchParams} />
         break
       case 'tags':
         middle = <Tag key="tag" id={tagOrPostId} searchParams={searchParams} />

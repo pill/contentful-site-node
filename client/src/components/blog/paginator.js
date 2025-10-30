@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { range } from '../../utils'
 
-export default ({ totalPages, p, rpp }) => {
+export default ({ totalPages, p, rpp, basePath = '/blog' }) => {
   const padding = 5
   const start = (p - padding) > 0 ? (p - padding) : 1
   const end = (p + padding) <= totalPages ? (p + padding) : totalPages
@@ -12,7 +12,7 @@ export default ({ totalPages, p, rpp }) => {
     <div id="paginator">
     {
       range(start, end+1, 1).map(i => {
-        return <a href={`/blog?p=${i}&rpp=${rpp}`} key={i}>{i}</a>
+        return <a href={`${basePath}?p=${i}&rpp=${rpp}`} key={i}>{i}</a>
       })
     }
     </div>

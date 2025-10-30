@@ -70,6 +70,8 @@ export default (props) => {
                  href="/">home</a>
               <a class={['blog', 'tags', 'post'].includes(props.section) ? 'selected' : ''}
                  href='/blog'>blog</a>
+              <a class={['dev'].includes(props.section) ? 'selected' : ''}
+                 href='/dev'>dev</a>
         </div>
       </div>
     </Nav>

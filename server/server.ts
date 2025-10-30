@@ -6,10 +6,6 @@ import path from 'path';
 // Load environment variables
 dotenv.config();
 
-// Log the absolute path of the current file
-console.log('Current file path:', __filename);
-console.log('Current directory path:', __dirname);
-
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -26,8 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(clientPath));
 
-// Homepage
-app.get('/', (req: Request, res: Response) => {
+// Serve index.html for all routes (client-side routing)
+app.get('*', (req: Request, res: Response) => {
   res.sendFile(path.join(clientPath, 'index.html'));
 });
 
