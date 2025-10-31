@@ -33,6 +33,11 @@ const Main = styled.div`
   h1 {
     font-family: 'Roboto', sans-serif;
     color: ${palette.heading};
+    margin-top: 50px;
+  }
+
+  h2, h3 {
+    margin-top: 50px;
   }
 
   ul {
@@ -42,11 +47,18 @@ const Main = styled.div`
 
   a {
     text-decoration: none;
-    &:link, &:visited {
-      color: ${palette.text};
+    color: ${palette.text};
+  }
+
+  #post-body a {
+    &:link {
+      color: ${palette.link};
+    }
+    &:visited {
+      color: ${palette.visitedLink};
     }
     &:hover {
-      color: ${palette.text};
+      color: ${palette.link};
     }
   }
 

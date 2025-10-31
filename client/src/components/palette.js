@@ -13,6 +13,8 @@ export default {
   background: '#022b3a',
   heading: '#ffffff',
   text: '#e1e5f2',
+  link: '#de6e4b',
+  visitedLink: '#de6e4b',
   nav: '#bfdbf7',
   subHeading: '#bfdbf7',
   imageBorder: '#dddddd'
