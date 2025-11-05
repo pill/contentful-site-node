@@ -34,6 +34,12 @@ export default function Post(props) {
         ul {
           list-style-type: circle;
         }
+
+        img {
+          max-width: 550px;
+          width: 100%;
+          height: auto;
+        }
       }
 
       #tag-label {

@@ -68,6 +68,7 @@ const Main = styled.div`
     border-radius: 3px;
     padding: 2px 6px;
     font-family: 'Courier New', monospace;
+    font-size: .8em;
   }
 
   pre {

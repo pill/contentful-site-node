@@ -81,7 +81,7 @@ export default function Blog({ searchParams }) {
                           item.fields.thumb
                             ? <img
                                 src={item.fields.thumb.fields.file.url}
-                                width="560px" />
+                                width="550px" />
                             : ''
                         }
                       </a>
