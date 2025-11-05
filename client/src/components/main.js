@@ -62,6 +62,30 @@ const Main = styled.div`
     }
   }
 
+  code {
+    background-color: rgba(31, 122, 140, 0.2);
+    border: 1px solid ${palette.imageBorder};
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-family: 'Courier New', monospace;
+  }
+
+  pre {
+    background-color: rgba(31, 122, 140, 0.15);
+    border: 1px solid ${palette.imageBorder};
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+    margin: 20px 0;
+
+    code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+
   .loading {
     margin-top: 50px;
   }

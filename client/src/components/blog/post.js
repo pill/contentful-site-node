@@ -28,7 +28,7 @@ export default function Post(props) {
 
       #post-body {
         font-family: georgia;
-        line-height: 25px;
+        line-height: 30px;
         margin-bottom: 25px;
 
         ul {
