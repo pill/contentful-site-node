@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import palette from './palette'
 import styled from 'styled-components'
+import useBlog from './blog/useBlog'
 
 const Nav = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Teko&display=swap');
@@ -52,6 +53,23 @@ const Nav = styled.div`
 `
 
 export default (props) => {
+  const { entry } = useBlog()
+  
+  // Check if current post has 'dev' tag (only if entry is loaded)
+  const isDevPost = props.section === 'post' && 
+    entry && 
+    entry.metadata && 
+    entry.metadata.tags && 
+    entry.metadata.tags.some(tag => tag.sys.id === 'dev')
+  
+  // Determine which nav items should be selected
+  const isHomeSelected = [''].includes(props.section)
+  // For posts: only select blog if entry is loaded and confirmed not to be dev post
+  // This prevents flash of "blog" selected while entry is loading
+  const isBlogSelected = (['blog', 'tags'].includes(props.section)) || 
+    (props.section === 'post' && entry && !isDevPost)
+  const isDevSelected = props.section === 'dev' || isDevPost
+
   return (
     <Nav>
       <div id="nav-container">
@@ -66,11 +84,11 @@ export default (props) => {
         </div>
 
         <div id="main-nav">
-              <a class={ [''].includes(props.section) ? 'selected' : ''}
+              <a class={isHomeSelected ? 'selected' : ''}
                  href="/">home</a>
-              <a class={['blog', 'tags', 'post'].includes(props.section) ? 'selected' : ''}
+              <a class={isBlogSelected ? 'selected' : ''}
                  href='/blog'>blog</a>
-              <a class={['dev'].includes(props.section) ? 'selected' : ''}
+              <a class={isDevSelected ? 'selected' : ''}
                  href='/dev'>dev</a>
         </div>
       </div>
