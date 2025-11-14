@@ -24,9 +24,10 @@ export default function Home() {
       <div id="home-container">
         <img src="https://images.ctfassets.net/9itkoq01s77j/2METWxNUggmn6bfqiHhpKu/2215a0bd75ad13cd4eba994008eb8d68/Phil_Avery_on_Instagram_____Yet_another_ramen_place_in_nyc__not_complaining_though___ramen__nyc___.png" />
         <div>
-          Just a picture of some yummy ramen I ate once.
+          Just an internet site for my ramblings.
         </div>
       </div>
     </HomePage>
   )
 }
+
